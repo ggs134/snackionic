@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "express": "~4.4.3",
-    "mongoose": "3.8.26"
+    "mongoose": "3.8.26",
+    "monk":"1.0.1"
   }
 }
