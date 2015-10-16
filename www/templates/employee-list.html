@@ -1,15 +1,91 @@
-<ion-view title="Employees">
 
+<!-- <ion-view title="SnackFinder"> -->
+
+<!-- header -->
+    <div class="bar bar-header">
+      <button class="button button-icon icon ion-navicon"></button>
+      <div class="h1 title">Snack Finder</div>
+      <button class="button button-clear button-positive">My</button>
+    </div>
+<!-- search -->
     <div class="bar bar-subheader item-input-inset">
         <label class="item-input-wrapper">
             <i class="icon ion-ios7-search placeholder-icon"></i>
             <input id="searchKey" type="search" placeholder="Search" ng-model="searchKey" autocorrect="off" >
+
             <button class="button button-clear" ng-click="clearSearch()">X</button>
         </label>
         <button class="button button-clear" ng-click="search()">Search</button>
+    </div> 
+<!-- menu -->
+    <div class="button-bar bar-light">
+          <a class="button activated">Home</a>
+          <a class="button">Review</a>
+          <a class="button">Dic</a>
+          <a class="button">SFa</a>
     </div>
 
-    <ion-content class="has-header has-subheader">
+    <div class="item item-divider">
+          Ranking Top 10
+    </div>
+
+    <a class="item item-icon-left" href="#">
+          <i class="icon ion-beaker">
+          </i>
+          <span class="item-note">
+            company
+          </span>
+          snackname
+    </a>
+    <a class="item item-icon-left" href="#">
+          <i class="icon ion-beaker">
+          </i>
+          <span class="item-note">
+            company
+          </span>
+          snackname
+    </a>
+    <a class="item item-icon-left" href="#">
+          <i class="icon ion-beaker">
+          </i>
+          <span class="item-note">
+            company
+          </span>
+          snackname
+    </a>
+
+
+
+     <div class="item item-divider">
+          New 
+    </div>
+    <a class="item item-icon-left" href="#">
+          <i class="icon ion-beaker">
+          </i>
+          <span class="item-note">
+            company
+          </span>
+          snackname
+    </a>
+    <a class="item item-icon-left" href="#">
+          <i class="icon ion-beaker">
+          </i>
+          <span class="item-note">
+            company
+          </span>
+          snackname
+    </a>
+    <a class="item item-icon-left" href="#">
+          <i class="icon ion-beaker">
+          </i>
+          <span class="item-note">
+            company
+          </span>
+          snackname
+    </a>
+
+
+<!-- <ion-content class="has-header has-subheader">
         <ion-list>
             <ion-item ng-repeat="employee in employees" type="item-text-wrap" class="item-avatar"
                       href="#/employees/{{employee.id}}">
@@ -18,6 +94,6 @@
                 <p>{{employee.title}}</p>
             </ion-item>
         </ion-list>
-    </ion-content>
+    </ion-content> 
 
-</ion-view>
+</ion-view> -->
