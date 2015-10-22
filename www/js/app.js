@@ -39,7 +39,7 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                 }
               })
 
-                .state('tap.home-detail', {
+                .state('tab.home-detail', {
                     url: '/home/foodId',
                     views:{
                         'tab-home':{
