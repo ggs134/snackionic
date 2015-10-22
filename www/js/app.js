@@ -49,6 +49,7 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                     }
                 })
 
+                /*Review Page*/
                 .state('tab.review', {
                 url: '/review',
                 views: {
@@ -59,6 +60,7 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                 }
               }) 
 
+                /*dictionary of Ingredients*/
                 .state('tab.dic', {
                 url: '/dic',
                 views: {
@@ -68,7 +70,6 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                   }
                 }
               })
-
                 .state('tab.dic-danger', {
                 url: '/dic/danger',
                 views: {
@@ -78,6 +79,16 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                   }
                 }
               })
+
+                .state('tab.sfa', {
+                url: '/sfa',
+                views: {
+                  'tab-sfa': {
+                    templateUrl: 'templates/sfa.html'/*,
+                    controller: ''*/
+                  }
+                }
+              })                
 
               ;
 
