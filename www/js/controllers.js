@@ -1,21 +1,6 @@
 angular.module('directory.controllers', [])
 
-    .controller('SnackListController', function($scope, Snacks){
-         $scope.searchKey = "";
-
-        $scope.clearSearch = function () {
-            $scope.searchKey = "";
-            $scope.snacks = Snacks.query();
-        }
-
-        $scope.search = function () {
-            $scope.snacks = Snacks.query({name: $scope.searchKey});
-        }
-
-        $scope.snacks = Snacks.query();
-    })
-
-    .controller('EmployeeListCtrl', function ($scope, Employees) {
+    .controller('FoodListCtrl', function ($scope, Employees) {
 
         $scope.searchKey = "";
 

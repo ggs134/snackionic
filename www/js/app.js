@@ -4,38 +4,53 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
         $ionicPlatform.ready(function () {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
             // for form inputs)
-            if (window.cordova && window.cordova.plugins.Keyboard) {
+            if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
                 cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+                cordova.plugins.Keyboard.disableScroll(true);
             }
             if (window.StatusBar) {
                 // org.apache.cordova.statusbar required
-                StatusBar.styleDefault();
+                StatusBar.styleLightContent();
             }
         });
     })
+
+/*    .config(function($ionicConfigProvider) {
+    $ionicConfigProvider.tabs.position('bottom');
+})*/
 
     .config(function ($stateProvider, $urlRouterProvider) {
 
         $stateProvider
 
-            .state('search', {
-                url: '/search',
-                templateUrl: 'templates/employee-list.html',
-                controller: 'EmployeeListCtrl'
-            })
+                .state('tab', {
+                url: '/tab',
+                abstract: true,
+                templateUrl: 'templates/tabs.html'
+                })
 
-            .state('employee', {
-                url: '/employees/:employeeId',
-                templateUrl: 'templates/employee-detail.html',
-                controller: 'EmployeeDetailCtrl'
-            })
+              .state('tab.home', {
+                url: '/home',
+                views: {
+                  'tab-home': {
+                    templateUrl: 'templates/food-home.html',
+                    controller: 'FoodListCtrl'
+                  }
+                }
+              })
 
-            .state('reports', {
-                url: '/employees/:employeeId/reports',
-                templateUrl: 'templates/employee-reports.html',
-                controller: 'EmployeeReportsCtrl'
-            });
+                .state('tap.home-detail', {
+                    url: '/home/foodId',
+                    views:{
+                        'tab-home':{
+                            templateUrl: 'templates/food-detail.html'/*,
+                            controller: 'FoodDetailControllser'*/
+                        }
+                    }
+                })
 
-        $urlRouterProvider.otherwise('/search');
+              ;
+
+        $urlRouterProvider.otherwise('/tab/home');
 
     });

@@ -1,0 +1,57 @@
+
+ <ion-view title="Food Analysis">
+    
+    <div class="bar bar-subheader item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input id="searchKey" type="search" placeholder="Search" ng-model="searchKey" autocorrect="off" >
+
+            <button class="button button-clear" ng-click="clearSearch()">X</button>
+        </label>
+        <button class="button button-clear" ng-click="search()">Search</button>
+    </div> 
+
+     
+      <ion-content class="padding">
+  
+
+            <!-- search -->
+
+
+ <!-- Ranking <--><br><br>
+            <ion-list>
+                <div class="item item-divider">
+          Ranking Top 10
+    </div>
+                  <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/home/foodId">
+                    <img ng-src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png">
+                            <h2>First Item</h2>
+                            <p>Manufacturer</p>
+                            <i class="icon ion-chevron-right icon-accessory"></i>
+                  </ion-item>
+
+                  <!-- <ion-item ng-repeat="employee in employees" type="item-text-wrap" class="item-avatar" href="#/employees/{{employee.id}}">
+                      <img src="pics/{{employee.pic}}"/>
+                      {{employee.firstName}} {{employee.lastName}}
+                      <p>{{employee.title}}</p>
+                  </ion-item> -->
+            </ion-list>
+           </div>
+
+
+            <!-- Recent -->
+           <div>
+            <ion-list>
+                <div class="item item-divider">
+           Recent 10
+    </div>
+                   <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/home/foodId">
+                    <img ng-src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png">
+                            <h2>Recent First Item</h2>
+                            <p>Manufacturer</p>
+                            <i class="icon ion-chevron-right icon-accessory"></i>
+                  </ion-item>
+            </ion-list>
+      </ion-content> 
+</ion-view> 
+
