@@ -1,0 +1,42 @@
+<ion-view title="Food Analysis">
+    
+    <!-- search -->
+    <div class="bar bar-subheader item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input id="searchKey" type="search" placeholder="Search" ng-model="searchKey" autocorrect="off" >
+
+            <button class="button button-clear" ng-click="clearSearch()">X</button>
+        </label>
+        <button class="button button-clear" ng-click="search()">Search</button>
+    </div> 
+
+ <!-- Ranking -->    
+      <ion-content class="padding">
+  
+
+            
+
+
+ <br><br>
+
+ <div class="row">
+  <div class="col col-center">8271 Ingredients has been updated</div>
+</div>
+
+            <ion-list>
+                  <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/dic/danger">
+                    <img ng-src="http://www.coloringsky.com/wp-content/uploads/2014/11/Danger-Sign-Skull-Coloring-Page.jpg">
+                            <h2>Dangerous Ingredient</h2>
+                            <i class="icon ion-chevron-right icon-accessory"></i>
+                  </ion-item>
+
+                  <!-- <ion-item ng-repeat="employee in employees" type="item-text-wrap" class="item-avatar" href="#/employees/{{employee.id}}">
+                      <img src="pics/{{employee.pic}}"/>
+                      {{employee.firstName}} {{employee.lastName}}
+                      <p>{{employee.title}}</p>
+                  </ion-item> -->
+            </ion-list>
+           </div>
+
+</ion-view> 

@@ -1,55 +1,41 @@
 <ion-view view-title="Food detail">
+    <!-- search -->
+    <div class="bar bar-subheader item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-ios7-search placeholder-icon"></i>
+            <input id="searchKey" type="search" placeholder="Search" ng-model="searchKey" autocorrect="off" >
+
+            <button class="button button-clear" ng-click="clearSearch()">X</button>
+        </label>
+        <button class="button button-clear" ng-click="search()">Search</button>
+    </div>
+
   <ion-content class="padding">
+
+ 
+<br>
     <div class="list card">
 
   <div class="item item-avatar">
-    <img src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png">
-    <h2>First Snack</h2>
-    <p>Nongsim</p>
+    <img src="http://cfs9.blog.daum.net/upload_control/download.blog?fhandle=MDVtMzdAZnM5LmJsb2cuZGF1bS5uZXQ6L1BST0ZJTEUvMC8wLmpwZw==&filenamebg      =0.jpg">
+    <b>Beckham</b> posted a review
+    <p>1 hour ago     </p>
   </div>
-  
- 
-
 
   <div class="item item-body">
     <img class="full-image" src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png">
     <p>
-    This is the Frrst Food. <br>
+    This tastes good! <br>
     wow <br>
     good
     </p>
     <p>
-  
-<!-- ingredients -->
-  <div class="list card">
-  <div class="item item-divider">
-          Ingredient
-    </div>
-
-  <a href="#" class="item item-icon-left">
-    <i class="icon ion-beaker"></i>
-    <p>Ingredient 1</p>
-  </a>
-</div>
-
-<!-- recommanded -->
-    <div class="list card">
-  <div class="item item-divider">
-          recommanded
-    </div>
-
-  <a href="#" class="item item-icon-left">
-    <i class="icon ion-beaker"></i>
-    <p>Ingredient 1</p>
-  </a>
-
-</div>
 
 
 <!-- count LIKE and Comments -->
     </p>
     <p>
-      <a href="#" class="subdued">1 Like</a>
+      <a href="#" class="subdued">0 Like</a>
       <a href="#" class="subdued">5 Comments</a>
     </p>
   </div>

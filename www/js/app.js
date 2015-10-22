@@ -49,6 +49,36 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                     }
                 })
 
+                .state('tab.review', {
+                url: '/review',
+                views: {
+                  'tab-review': {
+                    templateUrl: 'templates/review.html'/*,
+                    controller: ''*/
+                  }
+                }
+              }) 
+
+                .state('tab.dic', {
+                url: '/dic',
+                views: {
+                  'tab-dic': {
+                    templateUrl: 'templates/dic.html'/*,
+                    controller: ''*/
+                  }
+                }
+              })
+
+                .state('tab.dic-danger', {
+                url: '/dic/danger',
+                views: {
+                  'tab-dic': {
+                    templateUrl: 'templates/dic-danger.html'/*,
+                    controller: ''*/
+                  }
+                }
+              })
+
               ;
 
         $urlRouterProvider.otherwise('/tab/home');
