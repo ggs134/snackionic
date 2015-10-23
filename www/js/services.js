@@ -1,6 +1,6 @@
 angular.module('directory.services', ['ngResource'])
-    .factory('Snacks', function($resource) {
-    	return $resource('/main/:menu/:snackId/:ingredientPage');
+    .factory('Foods', function($resource) {
+    	return $resource('/tab/home/:foodId/:ingredientId');
     })
 
     .factory('Employees', function ($resource) {

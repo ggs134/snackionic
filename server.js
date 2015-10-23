@@ -2,13 +2,14 @@ var express = require('express'),
     employees = require('./routes/employees'),
     app = express();
 
-//var mongoose = require('mongoose');
-var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('mongodb://localhost:7070/snackDB');
+//Resource of food
+var foodResource = require('./routes/foods');
 
-// configuration =================
 // DATABASE SETUP
+mongo = require('mongodb');
+var db = require('monk')('mongodb://localhost:27017/snack');
+
+
 // =============================================================================
 
 /*var connection = mongoose.createConnection('mongodb://localhost:7070/snackDB');
@@ -54,6 +55,9 @@ app.get('/collections/:name', function (req, res) {
 app.get('/employees', employees.findAll);
 app.get('/employees/:id', employees.findById);
 app.get('/employees/:id/reports', employees.findReports);
+
+app.get('/tab/home', foodResource.findAll);
+app.get('/tab/home/:foodId', foodResource.findById);
 
 app.set('port', process.env.PORT || 5000);
 

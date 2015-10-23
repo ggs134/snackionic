@@ -34,7 +34,7 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                 views: {
                   'tab-home': {
                     templateUrl: 'templates/food-home.html',
-                    controller: 'FoodListCtrl'
+                    controller: 'FoodListController'
                   }
                 }
               })
@@ -88,10 +88,7 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                     controller: ''*/
                   }
                 }
-              })                
-
-              ;
+              });
 
         $urlRouterProvider.otherwise('/tab/home');
-
     });

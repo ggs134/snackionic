@@ -11,31 +11,25 @@
         </label>
         <button class="button button-clear" ng-click="search()">Search</button>
     </div> 
-
- <!-- Ranking <-->    
-      <ion-content class="padding">
-  
-
-            
-
-
- <br><br>
+d
+ <!-- Ranking -->    
+      <ion-content class="padding"><br><br>
             <ion-list>
                 <div class="item item-divider">
           Ranking Top 10
     </div>
-                  <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/home/foodId">
-                    <img ng-src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png">
-                            <h2>First Item</h2>
-                            <p>Manufacturer</p>
-                            <i class="icon ion-chevron-right icon-accessory"></i>
-                  </ion-item>
+<!--                   <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/home/foodId" ng-repeat="food in foods">
+  <img ng-src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png">
+          <h2>{{food.snack_name}}</h2>
+          <p>{{food.manufacturer}}</p>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+</ion-item> -->
 
-                  <!-- <ion-item ng-repeat="employee in employees" type="item-text-wrap" class="item-avatar" href="#/employees/{{employee.id}}">
-                      <img src="pics/{{employee.pic}}"/>
-                      {{employee.firstName}} {{employee.lastName}}
-                      <p>{{employee.title}}</p>
-                  </ion-item> -->
+                   <ion-item ng-repeat="food in foods | limitTo:10" type="item-text-wrap" class="item-avatar" href="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png">
+                      <img src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png"/>
+                      {{food.snack_name}}
+                      <p>{{food.manufacturer}}</p>
+                  </ion-item> 
             </ion-list>
            </div>
 
