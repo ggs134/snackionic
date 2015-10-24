@@ -7,7 +7,7 @@ var foodResource = require('./routes/foods');
 
 // DATABASE SETUP
 mongo = require('mongodb');
-var db = require('monk')('mongodb://localhost:27017/snack');
+var db = require('monk')('mongodb://54.92.86.174:27017/snack');
 
 
 // =============================================================================
