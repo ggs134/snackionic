@@ -26,7 +26,7 @@ d
 </ion-item> -->
 
                    <ion-item ng-repeat="food in foods | limitTo:10" type="item-text-wrap" class="item-avatar"
-                    href="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png" ng-click="foodDetail()">
+                   ng-click="foodDetail()">
                       <img src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png"/>
                       {{food.snack_name}}
                       <p>{{food.manufacturer}}</p>

@@ -90,5 +90,15 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                 }
               });
 
+              .state('tab.my', {
+              url: '/my',
+              views: {
+                'tab-my': {
+                  templateUrl: 'templates/my.html',
+                  controller: 'MyController'
+                }
+              }
+            });
+
         $urlRouterProvider.otherwise('/tab/home');
     });
