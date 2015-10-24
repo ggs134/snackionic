@@ -23,7 +23,7 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
 
         $stateProvider
 
-                .state('tab', {
+              .state('tab', {
                 url: '/tab',
                 abstract: true,
                 templateUrl: 'templates/tabs.html'
@@ -33,8 +33,8 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                 url: '/home',
                 views: {
                   'tab-home': {
-                    templateUrl: 'templates/food-home.html',
-                    controller: 'FoodListController'
+                    templateUrl: 'templates/food-home.html'
+                    ,controller: 'FoodListController'
                   }
                 }
               })
@@ -55,10 +55,10 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                 views: {
                   'tab-review': {
                     templateUrl: 'templates/review.html',
-                    controller: 'ReviewController'
+                    controller: 'ReviewListController'
                   }
                 }
-              }) 
+              })
 
                 /*dictionary of Ingredients*/
                 .state('tab.dic', {

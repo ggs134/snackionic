@@ -14,9 +14,11 @@ exports.findAll = function(req, res) {
 
     collection.find({}, function(err, docs){
     	res.json(docs);
+      //console.log(docs);
     })
+
 };
- 
+
 exports.findById = function(req, res) {
     var db = req.db;
     var collection = db.get('snacks');

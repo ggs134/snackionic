@@ -1,6 +1,6 @@
 
  <ion-view title="Food Analysis">
-    
+
     <!-- search -->
     <div class="bar bar-subheader item-input-inset">
         <label class="item-input-wrapper">
@@ -10,9 +10,9 @@
             <button class="button button-clear" ng-click="clearSearch()">X</button>
         </label>
         <button class="button button-clear" ng-click="search()">Search</button>
-    </div> 
+    </div>
 d
- <!-- Ranking -->    
+ <!-- Ranking -->
       <ion-content class="padding"><br><br>
             <ion-list>
                 <div class="item item-divider">
@@ -25,11 +25,12 @@ d
           <i class="icon ion-chevron-right icon-accessory"></i>
 </ion-item> -->
 
-                   <ion-item ng-repeat="food in foods | limitTo:10" type="item-text-wrap" class="item-avatar" href="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png">
+                   <ion-item ng-repeat="food in foods | limitTo:10" type="item-text-wrap" class="item-avatar"
+                    href="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png" ng-click="foodDetail()">
                       <img src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png"/>
                       {{food.snack_name}}
                       <p>{{food.manufacturer}}</p>
-                  </ion-item> 
+                  </ion-item>
             </ion-list>
            </div>
 
@@ -47,6 +48,5 @@ d
                             <i class="icon ion-chevron-right icon-accessory"></i>
                   </ion-item>
             </ion-list>
-      </ion-content> 
-</ion-view> 
-
+      </ion-content>
+</ion-view>
