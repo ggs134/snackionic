@@ -12,22 +12,20 @@
 
   <ion-content class="padding">
 
- 
+
 <br>
-    <div class="list card">
+    <div class="list card" ng-repeat="review in reviews">
 
   <div class="item item-avatar">
     <img src="http://cfs9.blog.daum.net/upload_control/download.blog?fhandle=MDVtMzdAZnM5LmJsb2cuZGF1bS5uZXQ6L1BST0ZJTEUvMC8wLmpwZw==&filenamebg      =0.jpg">
-    <b>Beckham</b> posted a review
-    <p>1 hour ago     </p>
+    <b>{{review.by.nickname}}</b> posted a review  <!-- nickname -->
+    <p>{{review.updated_time}}</p>  <!-- updated time -->
   </div>
 
   <div class="item item-body">
     <img class="full-image" src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png">
     <p>
-    This tastes good! <br>
-    wow <br>
-    good
+      {{review.text}}
     </p>
     <p>
 

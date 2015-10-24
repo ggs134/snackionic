@@ -55,7 +55,7 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                 views: {
                   'tab-review': {
                     templateUrl: 'templates/review.html',
-                    controller: 'ReviewListControllser'
+                    controller: 'ReviewListController'
                   }
                 }
               })
