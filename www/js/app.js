@@ -88,7 +88,7 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                     controller: ''*/
                   }
                 }
-              });
+              })
 
               .state('tab.my', {
               url: '/my',
