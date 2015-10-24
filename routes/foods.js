@@ -21,11 +21,10 @@ exports.findAll = function(req, res) {
 
 exports.findById = function(req, res) {
     var db = req.db;
-    var collection = db.get('detail');
-    var id = req.body.foodId;
+    var collection = db.get('snacks');
+    var id = req.body.id;
 
     collection.find({_id:id}, function(err, docs){
     	res.json(docs);
-      console.log(docs);
     })
 };
