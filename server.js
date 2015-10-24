@@ -62,7 +62,7 @@ app.get('/tab/home', foodResource.findAll);
 app.get('/tab/home/:foodId', foodResource.findById);
 
 app.get('/tab/review/', reviewResource.findAll);
-app.get('/tab/review/:reviewId', reviewResource.findById);
+app.get('/tab/review/:search', reviewResource.findById);
 
 app.set('port', process.env.PORT || 5000);
 
