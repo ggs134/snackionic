@@ -1,17 +1,6 @@
 angular.module('directory.controllers', [])
 
     .controller('FoodListController', function ($scope, Foods) {
-
-        /*$scope.searchKey = "";
-        $scope.clearSearch = function () {
-            $scope.searchKey = "";
-            $scope.employees = Employees.query();
-        }
-        $scope.search = function () {
-            $scope.employees = Employees.query({name: $scope.searchKey});
-        }
-        $scope.employees = Employees.query();*/
-
         $scope.searchKey = "";
         $scope.clearSearch = function () {
             $scope.searchKey = "";
@@ -21,7 +10,18 @@ angular.module('directory.controllers', [])
             $scope.foods = Foods.query({name: $scope.searchKey});
         }
         $scope.foods = Foods.query();
+    })
 
+    .controller('ReviewController', function($scope, Review){
+        $scope.searchKey = "";
+        $scope.clearSearch = function () {
+            $scope.searchKey = "";
+            $scope.review = Review.query();
+        }
+        $scope.search = function () {
+            $scope.foods = Review.get({search: $scope.searchKey});
+        }
+        $scope.reviews = Review.query();
     })
 
     .controller('FoodDetailController', function($scope, $stateParams, Employees) {

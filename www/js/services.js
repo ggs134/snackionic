@@ -3,6 +3,10 @@ angular.module('directory.services', ['ngResource'])
     	return $resource('/tab/home/:foodId/:ingredientId');
     })
 
+    .factory('Reviews', function($resource) {
+    	return $resource('/tab/review/:search');
+    })
+
     .factory('Employees', function ($resource) {
         return $resource('/employees/:employeeId/:data');
     });
