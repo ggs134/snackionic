@@ -12,9 +12,8 @@ angular.module('directory.controllers', [])
         $scope.foods = Foods.query();
     })
 
-    .controller('FoodDetailController', function($scope, $stateParams, Employees) {
-      console.log('details');
-      $scope.employee = Employees.get({employeeId: $stateParams.employeeId});
+    .controller('FoodDetailController', function($scope, $stateParams, Foods) {
+      $scope.food = Foods.get({_id: $stateParams.foodId});
     })
 
     .controller('ReviewListController', function($scope,Review,Reviews) {

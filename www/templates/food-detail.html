@@ -4,8 +4,8 @@
 
   <div class="item item-avatar">
     <img src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png">
-    <h2>First Snack</h2>
-    <p>Nongsim</p>
+    <h2>{{ food.snack_name }}</h2>
+    <p>{{food.manufacturer}}</p>
   </div>
   
  
@@ -14,9 +14,7 @@
   <div class="item item-body">
     <img class="full-image" src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png">
     <p>
-    This is the Frrst Food. <br>
-    wow <br>
-    good
+    text
     </p>
     <p>
   
@@ -26,9 +24,9 @@
           Ingredient
     </div>
 
-  <a href="#" class="item item-icon-left">
+  <a href="#" class="item item-icon-left" ng-repteat="ingredient in food.ingredient">
     <i class="icon ion-beaker"></i>
-    <p>Ingredient 1</p>
+    <p>{{ingredient.ing_name}} : {{ingredient.ing_amount}} : {{ingredient.ing_recommanded}}</p>
   </a>
 </div>
 
@@ -49,8 +47,8 @@
 <!-- count LIKE and Comments -->
     </p>
     <p>
-      <a href="#" class="subdued">1 Like</a>
-      <a href="#" class="subdued">5 Comments</a>
+      <a href="#" class="subdued">{{food.likes.length}} Like</a>
+      <a href="#" class="subdued">{{food.comments.length}} Comments</a>
     </p>
   </div>
 

@@ -40,7 +40,7 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
               })
 
                 .state('tab.home-detail', {
-                    url: '/home/foodId',
+                    url: '/home/:foodId',
                     views:{
                         'tab-home':{
                             templateUrl: 'templates/food-detail.html',
