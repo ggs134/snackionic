@@ -19,13 +19,13 @@ exports.findById = function(req, res) {
     	res.json(docs);
       console.log(docs);
     })
-}; 
+};
 exports.findByContents = function(req, res) {
     var db = req.db;
     var collection = db.get('comments');
     var contents = req.body.search;
 
-    collection.find({snack_name:contents}, function(err, docs){
+    collection.find({"text":{$regex:contents}}, function(err, docs){
     	res.json(docs);
       console.log(docs);
     })
