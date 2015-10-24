@@ -4,6 +4,7 @@ var express = require('express'),
 
 //Resource of food
 var foodResource = require('./routes/foods');
+var reviewResource = require('./routes/reviews');
 
 // DATABASE SETUP
 mongo = require('mongodb');
@@ -35,6 +36,7 @@ app.use(function (req, res, next) {
 
 // CORS (Cross-Origin Resource Sharing) headers to support Cross-site HTTP requests
 app.all('*', function(req, res, next) {
+    console.log("Received request to " + req.url);
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");
     next();
@@ -58,6 +60,9 @@ app.get('/employees/:id/reports', employees.findReports);
 
 app.get('/tab/home', foodResource.findAll);
 app.get('/tab/home/:foodId', foodResource.findById);
+
+app.get('/tab/review/', reviewResource.findAll);
+app.get('/tab/review/:reviewId', reviewResource.findById);
 
 app.set('port', process.env.PORT || 5000);
 
