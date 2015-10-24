@@ -44,7 +44,7 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                     views:{
                         'tab-home':{
                             templateUrl: 'templates/food-detail.html',
-                            controller: 'FoodDetailControllser'
+                            controller: 'FoodDetailController'
                         }
                     }
                 })
