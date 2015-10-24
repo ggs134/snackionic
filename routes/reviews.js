@@ -19,8 +19,7 @@ exports.findById = function(req, res) {
     	res.json(docs);
       console.log(docs);
     })
-};
-\
+}; 
 exports.findByContents = function(req, res) {
     var db = req.db;
     var collection = db.get('comments');
