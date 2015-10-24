@@ -25,7 +25,7 @@ exports.findById = function(req, res) {
     var id = req.params.foodId;
     var o_id = new require('mongodb').ObjectID(id);
     collection.find({_id:o_id}, function(err, docs){
-      console.log(docs);
+      //console.log(docs);
     	res.json(docs);
     })
 };

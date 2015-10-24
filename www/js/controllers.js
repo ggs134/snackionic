@@ -8,14 +8,7 @@ angular.module('directory.controllers', [])
         }
         $scope.search = function () {
             $scope.foods = Foods.query({name: $scope.searchKey});
-        }
-
-        $scope.foodDetail = function(item) {
-          // Shows/hides the delete button on hover
-          var foodId = $scope.food._id;
-          console.log(foodId);
-          $location.path("#/tab/home/foodId")
-        }; 
+        } 
 
         $scope.foods = Foods.query();
     })
