@@ -23,7 +23,7 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
 
         $stateProvider
 
-                .state('tab', {
+              .state('tab', {
                 url: '/tab',
                 abstract: true,
                 templateUrl: 'templates/tabs.html'
@@ -33,18 +33,18 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                 url: '/home',
                 views: {
                   'tab-home': {
-                    templateUrl: 'templates/food-home.html',
-                    controller: 'FoodListController'
+                    templateUrl: 'templates/food-home.html'
+                    ,controller: 'FoodListController'
                   }
                 }
               })
 
                 .state('tab.home-detail', {
-                    url: '/home/foodId',
+                    url: '/home/:foodId',
                     views:{
                         'tab-home':{
-                            templateUrl: 'templates/food-detail.html'/*,
-                            controller: 'FoodDetailControllser'*/
+                            templateUrl: 'templates/food-detail.html',
+                            controller: 'FoodDetailControllser'
                         }
                     }
                 })
@@ -55,10 +55,10 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                 views: {
                   'tab-review': {
                     templateUrl: 'templates/review.html',
-                    controller: 'ReviewController'
+                    controller: 'ReviewListController'
                   }
                 }
-              }) 
+              })
 
                 /*dictionary of Ingredients*/
                 .state('tab.dic', {
@@ -89,6 +89,16 @@ angular.module('directory', ['ionic', 'directory.controllers', 'directory.servic
                   }
                 }
               });
+
+              .state('tab.my', {
+              url: '/my',
+              views: {
+                'tab-my': {
+                  templateUrl: 'templates/my.html',
+                  controller: 'MyController'
+                }
+              }
+            });
 
         $urlRouterProvider.otherwise('/tab/home');
     });

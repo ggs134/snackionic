@@ -14,15 +14,18 @@ exports.findAll = function(req, res) {
 
     collection.find({}, function(err, docs){
     	res.json(docs);
+      //console.log(docs);
     })
+
 };
- 
+
 exports.findById = function(req, res) {
     var db = req.db;
-    var collection = db.get('snacks');
-    var id = req.body.id;
+    var collection = db.get('detail');
+    var id = req.body.foodId;
 
     collection.find({_id:id}, function(err, docs){
     	res.json(docs);
+      console.log(docs);
     })
 };
