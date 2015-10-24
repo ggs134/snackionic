@@ -22,10 +22,10 @@ exports.findAll = function(req, res) {
 exports.findById = function(req, res) {
     var db = req.db;
     var collection = db.get('detail');
-    var id = req.body.foodId;
-    var o_id = new ObjectID(id);
-
+    var id = req.params.foodId;
+    var o_id = new require('mongodb').ObjectID(id);
     collection.find({_id:o_id}, function(err, docs){
+      console.log(docs);
     	res.json(docs);
     })
 };
