@@ -60,7 +60,8 @@ app.get('/employees/:id', employees.findById);
 app.get('/employees/:id/reports', employees.findReports);
 
 app.get('/tab/home', foodResource.findAll);
-app.get('/tab/home/:foodId', foodResource.findById);
+app.get('/tab/home/:foodId/detail', foodResource.findById);
+
 
 app.get('/tab/review', reviewResource.findAll);
 app.get('/tab/review/:reviewId', reviewResource.findById);

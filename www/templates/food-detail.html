@@ -2,73 +2,65 @@
   <ion-content class="padding">
     <div class="list card">
 
-  <div class="item item-avatar">
-    <img src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png">
-    <h2>{{ food.snack_name }}</h2>
-    <p>{{food.manufacturer}}</p>
-  </div>
-  
- 
+      <div class="item item-avatar">
+        <img src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png">
+        <h2>{{ food.snack_name }}</h2>
+        <p>{{food.manufacturer}}</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png">
+        <p>
+          text
+        </p>
+        <p>
+          <div class="list card">
+            <div class="item item-divider">
+              Ingredient
+            </div>
+
+            <a href="#" class="item item-icon-left" ng-repeat="ingredient in food.ingredient">
+              <i class="icon ion-beaker"></i>
+              <p>{{ingredient.ing_name}} : {{ingredient.ing_amount}} : {{ingredient.ing_recommanded}}</p>
+            </a>
+          </div>
+
+          <div class="list card">
+            <div class="item item-divider">
+              recommanded
+            </div>
+
+            <a href="#" class="item item-icon-left">
+              <i class="icon ion-beaker"></i>
+              <p>Ingredient 1</p>
+            </a>
+
+          </div>
 
 
-  <div class="item item-body">
-    <img class="full-image" src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png">
-    <p>
-    text
-    </p>
-    <p>
-  
-<!-- ingredients -->
-  <div class="list card">
-  <div class="item item-divider">
-          Ingredient
+        </p>
+        <p>
+          <a href="#" class="subdued">{{food.likes.length}} Like</a>
+          <a href="#" class="subdued">{{food.comments.length}} Comments</a>
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-thumbsup"></i>
+          Like
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-chatbox"></i>
+          Comment
+        </a>
+        <a class="tab-item" href="#">
+          <i class="icon ion-share"></i>
+          Share
+        </a>
+      </div>
+
+
     </div>
-
-  <a href="#" class="item item-icon-left" ng-repteat="ingredient in food.ingredient">
-    <i class="icon ion-beaker"></i>
-    <p>{{ingredient.ing_name}} : {{ingredient.ing_amount}} : {{ingredient.ing_recommanded}}</p>
-  </a>
-</div>
-
-<!-- recommanded -->
-    <div class="list card">
-  <div class="item item-divider">
-          recommanded
-    </div>
-
-  <a href="#" class="item item-icon-left">
-    <i class="icon ion-beaker"></i>
-    <p>Ingredient 1</p>
-  </a>
-
-</div>
-
-
-<!-- count LIKE and Comments -->
-    </p>
-    <p>
-      <a href="#" class="subdued">{{food.likes.length}} Like</a>
-      <a href="#" class="subdued">{{food.comments.length}} Comments</a>
-    </p>
-  </div>
-
-<!-- Like and Comments Button -->
- <div class="item tabs tabs-secondary tabs-icon-left">
-    <a class="tab-item" href="#">
-      <i class="icon ion-thumbsup"></i>
-      Like
-    </a> 
-    <a class="tab-item" href="#">
-      <i class="icon ion-chatbox"></i>
-      Comment
-    </a>
-    <a class="tab-item" href="#">
-      <i class="icon ion-share"></i>
-      Share
-    </a>
-  </div>
-  
-
-</div>
   </ion-content>
 </ion-view>

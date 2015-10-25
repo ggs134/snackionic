@@ -1,44 +1,43 @@
 angular.module('directory.controllers', [])
 
-    .controller('FoodListController', function ($scope, Foods) {
-        $scope.searchKey = "";
-        $scope.clearSearch = function () {
-            $scope.searchKey = "";
-            $scope.foods = Foods.query();
-        }
-        $scope.search = function () {
-            $scope.foods = Foods.query({name: $scope.searchKey});
-        } 
+.controller('FoodListController', function ($scope, Foods) {
+  $scope.searchKey = "";
+  $scope.clearSearch = function () {
+    $scope.searchKey = "";
+    $scope.foods = Foods.query();
+  }
+  $scope.search = function () {
+    $scope.foods = Foods.query({name: $scope.searchKey});
+  }
+  $scope.foods = Foods.query();
+})
 
-        $scope.foods = Foods.query();
-    })
+.controller('FoodDetailController', function($scope, $stateParams, Food) { 
+  $scope.food = Food.get({foodId: $stateParams.foodId});
+})
 
-    .controller('FoodDetailController', function($scope, $stateParams, Foods) {
-      $scope.food = Foods.get({foodId: $stateParams.foodId});
-    })
+.controller('ReviewListController', function($scope,Review,Reviews) {
+  console.log('ReviewListController');
 
-    .controller('ReviewListController', function($scope,Review,Reviews) {
-      console.log('ReviewListController');
+  $scope.searchKey = "";
+  $scope.clearSearch = function () {
+    $scope.searchKey = "";
+    $scope.reviews = Reviews.query();
+  }
+  $scope.search = function () {
+    $scope.reviews = Review.query({name: $scope.searchKey});
+  }
+  $scope.reviews = Reviews.query();
 
-      $scope.searchKey = "";
-      $scope.clearSearch = function () {
-        $scope.searchKey = "";
-        $scope.reviews = Reviews.query();
-      }
-      $scope.search = function () {
-        $scope.reviews = Review.query({name: $scope.searchKey});
-      }
-      $scope.reviews = Reviews.query();
-
-    })
+})
 
 
-    .controller('EmployeeDetailCtrl', function($scope, $stateParams, Employees) {
-        console.log('details');
-        $scope.employee = Employees.get({employeeId: $stateParams.employeeId});
-    })
+.controller('EmployeeDetailCtrl', function($scope, $stateParams, Employees) {
+  console.log('details');
+  $scope.employee = Employees.get({employeeId: $stateParams.employeeId});
+})
 
-    .controller('EmployeeReportsCtrl', function ($scope, $stateParams, Employees) {
-        console.log('reports');
-        $scope.employee = Employees.get({employeeId: $stateParams.employeeId, data: 'reports'});
-    });
+.controller('EmployeeReportsCtrl', function ($scope, $stateParams, Employees) {
+  console.log('reports');
+  $scope.employee = Employees.get({employeeId: $stateParams.employeeId, data: 'reports'});
+});
