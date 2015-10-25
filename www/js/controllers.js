@@ -12,8 +12,19 @@ angular.module('directory.controllers', [])
   $scope.foods = Foods.query();
 })
 
-.controller('FoodDetailController', function($scope, $stateParams, Food) { 
+.controller('FoodDetailController', function($scope, $stateParams, Food, $ionicModal) { 
   $scope.food = Food.get({foodId: $stateParams.foodId});
+
+// Load the modal from the given template URL
+    $ionicModal.fromTemplateUrl('/templates/comments-modal.html', function($ionicModal) {
+        $scope.modal = $ionicModal;
+    }, {
+        // Use our scope for the scope of the modal to keep it simple
+        scope: $scope,
+        // The animation we want to use for the modal entrance
+        animation: 'slide-in-up'
+    });  
+
 })
 
 .controller('ReviewListController', function($scope,Review,Reviews) {

@@ -13,6 +13,8 @@
         <p>
           text
         </p>
+
+<!-- Ingredient Information -->
         <p>
           <div class="list card">
             <div class="item item-divider">
@@ -21,24 +23,13 @@
 
             <a href="#" class="item item-icon-left" ng-repeat="ingredient in food.ingredient">
               <i class="icon ion-beaker"></i>
-              <p>{{ingredient.ing_name}} : {{ingredient.ing_amount}} : {{ingredient.ing_recommanded}}</p>
+              {{ingredient.ing_name}}
+              <p>{{ingredient.ing_recommanded}}</p>
             </a>
           </div>
-
-          <div class="list card">
-            <div class="item item-divider">
-              recommanded
-            </div>
-
-            <a href="#" class="item item-icon-left">
-              <i class="icon ion-beaker"></i>
-              <p>Ingredient 1</p>
-            </a>
-
-          </div>
-
-
         </p>
+
+        <!-- Like and Comments -->
         <p>
           <a href="#" class="subdued">{{food.likes.length}} Like</a>
           <a href="#" class="subdued">{{food.comments.length}} Comments</a>
@@ -50,7 +41,7 @@
           <i class="icon ion-thumbsup"></i>
           Like
         </a>
-        <a class="tab-item" href="#">
+        <a class="tab-item" ng-click="modal.show()">
           <i class="icon ion-chatbox"></i>
           Comment
         </a>
