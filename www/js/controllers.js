@@ -14,7 +14,7 @@ angular.module('directory.controllers', [])
     })
 
     .controller('FoodDetailController', function($scope, $stateParams, Foods) {
-      $scope.food = Foods.get({_id: $stateParams.foodId});
+      $scope.food = Foods.get({foodId: $stateParams.foodId});
     })
 
     .controller('ReviewListController', function($scope,Review,Reviews) {
