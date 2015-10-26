@@ -25,6 +25,7 @@ angular.module('directory.controllers', [])
         animation: 'slide-in-up'
     });  
 
+
 })
 
 .controller('ReviewListController', function($scope,Review,Reviews) {

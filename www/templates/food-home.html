@@ -24,15 +24,14 @@
           <i class="icon ion-chevron-right icon-accessory"></i>
 </ion-item> -->
 
-                   <ion-item ng-repeat="food in foods | limitTo:10" type="item-text-wrap" class="item-avatar"
+                   <ion-item ng-repeat="food in foods | limitTo:100" type="item-text-wrap" class="item-avatar"
                     href="#/tab/home/{{food._id}}/detail">
-                      <img ng-src="http://tmhm1.dothome.co.kr/06.02/pdt_basic.png"/>
+                      <img ng-src="{{food.image_url}}"/>
                       {{food.snack_name}}
                       <p>{{food.manufacturer}}</p>
                   </ion-item>
             </ion-list>
            </div>
-
 
             <!-- Recent -->
            <div>
@@ -47,5 +46,6 @@
                             <i class="icon ion-chevron-right icon-accessory"></i>
                   </ion-item>
             </ion-list>
+            </div>
       </ion-content>
 </ion-view>
