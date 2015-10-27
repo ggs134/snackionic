@@ -38,7 +38,16 @@ $ionicConfigProvider.tabs.position('bottom');
       }
     }
   })
-  .state('tab.detail', {
+  .state('tab.home-search', {
+    url: '/home/:foodName',
+    views: {
+      'tab-home': {
+        templateUrl: 'templates/food-home.html',
+        controller: 'FoodListController'
+      }
+    }
+  })
+  .state('tab.home-detail', {
     url: '/home/:foodId/detail',
     views: {
       'tab-home':{

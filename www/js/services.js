@@ -1,5 +1,8 @@
 angular.module('directory.services', ['ngResource'])
 .factory('Food', function($resource) {
+  return $resource('/tab/home/:foodName');
+})
+.factory('Food_detail', function($resource) {
   return $resource('/tab/home/:foodId/detail');
 })
 .factory('Foods', function($resource) {
