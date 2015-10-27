@@ -5,9 +5,8 @@
             <i class="icon ion-ios7-search placeholder-icon"></i>
             <input id="searchKey" type="search" placeholder="Search" ng-model="searchKey" autocorrect="off" >
 
-            <button class="button button-clear" ng-click="clearSearch()">X</button>
         </label>
-        <button class="button button-clear" ng-click="search()">Search</button>
+                    <button class="button button-clear" ng-click="clearSearch()">X</button>
     </div>
 
   <ion-content class="padding">
@@ -19,7 +18,8 @@
   <div class="item item-avatar">
     <img src="http://cfs9.blog.daum.net/upload_control/download.blog?fhandle=MDVtMzdAZnM5LmJsb2cuZGF1bS5uZXQ6L1BST0ZJTEUvMC8wLmpwZw==&filenamebg      =0.jpg">
     <b>{{review.by.nickname}}</b> posted a review  <!-- nickname -->
-    <p>{{review.updated_time}}</p>  <!-- updated time -->
+    <p>작성 날짜 : {{review.created_time}}</p>  <!-- updated time -->
+    <p>최종 수정 : {{review.updated_time}}</p>  <!-- updated time -->
   </div>
 
   <div class="item item-body">
@@ -29,7 +29,7 @@
     <p>
 
 
-<!-- count LIKE and Comments -->
+<!-- count LIKE and Comments
     </p>
     <p>
       <a href="#" class="subdued">0 Like</a>
@@ -37,7 +37,6 @@
     </p>
   </div>
 
-<!-- Like and Comments Button -->
  <div class="item tabs tabs-secondary tabs-icon-left">
     <a class="tab-item" href="#">
       <i class="icon ion-thumbsup"></i>
@@ -53,7 +52,7 @@
     </a>
   </div>
 
-
+-->
 </div>
   </ion-content>
 </ion-view>

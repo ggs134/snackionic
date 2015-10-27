@@ -5,7 +5,7 @@ exports.findAll = function(req, res) {
 
     collection.find({}, function(err, docs){
     	res.json(docs);
-      //console.log(docs);
+      console.log(docs);
     })
 
 };
