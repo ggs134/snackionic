@@ -24,7 +24,7 @@
           <i class="icon ion-chevron-right icon-accessory"></i>
 </ion-item> -->
 
-                   <ion-item ng-repeat="food in foods | limitTo:100" type="item-text-wrap" class="item-avatar"
+                   <ion-item ng-repeat="food in foods|filter:searchKey" type="item-text-wrap" class="item-avatar"
                     href="#/tab/home/{{food._id}}/detail">
                       <img ng-src="{{food.image_url}}"/>
                       {{food.snack_name}}

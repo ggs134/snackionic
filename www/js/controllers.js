@@ -37,7 +37,7 @@ angular.module('directory.controllers', [])
     $scope.reviews = Reviews.query();
   }
   $scope.search = function () {
-    $scope.reviews = Review.query({name: $scope.searchKey});
+        $scope.reviews = Reviews.query();
   }
   $scope.reviews = Reviews.query();
 
