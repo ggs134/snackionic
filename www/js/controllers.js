@@ -29,7 +29,7 @@ angular.module('directory.controllers', [])
     $scope.reviews = Reviews.query();
   }
   $scope.search = function () {
-        $scope.reviews = Reviews.query();
+  /*      $scope.reviews = Reviews.query();*/
   }
   $scope.reviews = Reviews.query();
 
