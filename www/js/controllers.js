@@ -1,19 +1,11 @@
 angular.module('directory.controllers', [])
 
-.controller('FoodListController', function ($scope, Foods) {
-  $scope.searchKey = "";
-  $scope.clearSearch = function () {
-    $scope.searchKey = "";
-    $scope.foods = Foods.query();
-  }
-  $scope.search = function () {
-    $scope.foods = Foods.query({name: $scope.searchKey});
-  }
+.controller('FoodListController',  function ($scope, Foods) { 
   $scope.foods = Foods.query();
 })
 
-.controller('FoodDetailController', function($scope, $stateParams, Food, $ionicModal) { 
-  $scope.food = Food.get({foodId: $stateParams.foodId});
+.controller('FoodDetailController', function($scope, $stateParams, Food_detail, $ionicModal) {
+  $scope.food = Food_detail.get({foodId: $stateParams.foodId});
 
 // Load the modal from the given template URL
     $ionicModal.fromTemplateUrl('/templates/comments-modal.html', function($ionicModal) {
@@ -23,7 +15,7 @@ angular.module('directory.controllers', [])
         scope: $scope,
         // The animation we want to use for the modal entrance
         animation: 'slide-in-up'
-    });  
+    });
 
 
 })

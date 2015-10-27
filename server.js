@@ -61,6 +61,7 @@ app.get('/employees/:id/reports', employees.findReports);
 
 app.get('/tab/home', foodResource.findAll);
 app.get('/tab/home/:foodId/detail', foodResource.findById);
+app.get('/tab/home/:foodName', foodResource.findByName);
 
 
 app.get('/tab/review', reviewResource.findAll);
