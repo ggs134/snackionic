@@ -21,11 +21,17 @@
               Ingredient
             </div>
 
-            <a href="#" class="item item-icon-left" ng-repeat="ingredient in food.ingredient">
+            <a  class="item item-icon-left" ng-repeat="ingredient in food.ingredient" ng-href="{{ingredient.ing_link[1]}}" onclick="window.open(this.href, '_system', 'location=yes'); return false;">
               <i class="icon ion-beaker"></i>
               {{ingredient.ing_name}}
               <p>{{ingredient.ing_recomanded[1]}}</p>
             </a>
+
+            <!-- <a href="{{}}" class="item item-icon-left" ng-repeat="ingredient in food.ingredient">
+              <i class="icon ion-beaker"></i>
+              {{ingredient.ing_name}}
+              <p>{{ingredient.ing_recomanded[1]}}</p>
+            </a> -->
           </div>
         </p>
 
