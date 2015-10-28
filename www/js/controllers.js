@@ -40,6 +40,15 @@ angular.module('directory.controllers', [])
   $scope.reviews = Reviews.query();
 })
 
+.controller('LoginController', function($window, $scope,Reviews) {
+  $scope.back = function(){
+    $window.history.back();
+  }
+  $scope.login = function(){
+    alert("Login...");
+  }
+})
+
 .controller('EmployeeDetailCtrl', function($scope, $stateParams, Employees) {
   console.log('details');
   $scope.employee = Employees.get({employeeId: $stateParams.employeeId});

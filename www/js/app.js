@@ -37,7 +37,7 @@ $ionicConfigProvider.tabs.position('bottom');
         controller: 'FoodListController'
       }
     }
-  }) 
+  })
   .state('tab.home-detail', {
     url: '/home/:foodId/detail',
     views: {
@@ -89,15 +89,10 @@ $ionicConfigProvider.tabs.position('bottom');
     }
   })
 
-  .state('tab.my', {
-    url: '/my',
-    views: {
-      'tab-my': {
-        templateUrl: 'templates/my.html',
-        controller: 'MyController'
-      }
-    }
-  });
-
+  .state('login', {
+        url: '/login',
+          templateUrl: 'templates/login.html',
+          controller: 'LoginController'
+    })
   $urlRouterProvider.otherwise('/tab/home');
 });
