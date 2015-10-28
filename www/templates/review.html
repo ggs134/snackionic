@@ -1,58 +1,58 @@
 <ion-view view-title="Food detail">
-    <!-- search -->
-    <div class="bar bar-subheader item-input-inset">
-        <label class="item-input-wrapper">
-            <i class="icon ion-ios7-search placeholder-icon"></i>
-            <input id="searchKey" type="search" placeholder="Search" ng-model="searchKey" autocorrect="off" >
+  <!-- search -->
+  <div class="bar bar-subheader item-input-inset">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios7-search placeholder-icon"></i>
+      <input id="searchKey" type="search" placeholder="Search" ng-model="searchKey" autocorrect="off" >
 
-        </label>
-                    <button class="button button-clear" ng-click="clearSearch()">X</button>
-    </div>
+    </label>
+    <button class="button button-clear" ng-click="clearSearch()">X</button>
+  </div>
 
   <ion-content class="padding">
 
 
-<br>
-    <div class="list card" ng-repeat="review in reviews|filter:searchKey">
+    <br>
+    <div class="list card" ng-repeat="review in reviews|filter:searchKey| orderBy: 'created_time'">
 
-  <div class="item item-avatar">
-    <img src="http://cfs9.blog.daum.net/upload_control/download.blog?fhandle=MDVtMzdAZnM5LmJsb2cuZGF1bS5uZXQ6L1BST0ZJTEUvMC8wLmpwZw==&filenamebg      =0.jpg">
-    <b>{{review.by.nickname}}</b> posted a review  <!-- nickname -->
-    <p>작성 날짜 : {{review.created_time}}</p>  <!-- updated time -->
-    <p>최종 수정 : {{review.updated_time}}</p>  <!-- updated time -->
-  </div>
+      <div class="item item-avatar">
+        <img src="http://cfs9.blog.daum.net/upload_control/download.blog?fhandle=MDVtMzdAZnM5LmJsb2cuZGF1bS5uZXQ6L1BST0ZJTEUvMC8wLmpwZw==&filenamebg      =0.jpg">
+        <b>{{review.by.nickname}}</b> posted a review  <!-- nickname -->
+        <p>작성 날짜 : {{review.created_time}}</p>  <!-- updated time -->
+        <p>최종 수정 : {{review.updated_time}}</p>  <!-- updated time -->
+      </div>
 
-  <div class="item item-body">
-    <p>
-      {{review.text}}
-    </p>
-    <p>
+      <div class="item item-body">
+        <p>
+          {{review.text}}
+        </p>
+        <!-- count LIKE and Comments
+        <p>
 
 
-<!-- count LIKE and Comments
-    </p>
-    <p>
-      <a href="#" class="subdued">0 Like</a>
-      <a href="#" class="subdued">5 Comments</a>
-    </p>
-  </div>
+        </p>
+        <p>
+        <a href="#" class="subdued">0 Like</a>
+        <a href="#" class="subdued">5 Comments</a>
+      </p>
+    </div>
 
- <div class="item tabs tabs-secondary tabs-icon-left">
+    <div class="item tabs tabs-secondary tabs-icon-left">
     <a class="tab-item" href="#">
-      <i class="icon ion-thumbsup"></i>
-      Like
-    </a>
-    <a class="tab-item" href="#">
-      <i class="icon ion-chatbox"></i>
-      Comment
-    </a>
-    <a class="tab-item" href="#">
-      <i class="icon ion-share"></i>
-      Share
-    </a>
-  </div>
+    <i class="icon ion-thumbsup"></i>
+    Like
+  </a>
+  <a class="tab-item" href="#">
+  <i class="icon ion-chatbox"></i>
+  Comment
+</a>
+<a class="tab-item" href="#">
+<i class="icon ion-share"></i>
+Share
+</a>
+</div>
 
 -->
 </div>
-  </ion-content>
+</ion-content>
 </ion-view>

@@ -26,6 +26,11 @@ connection.once('open', function(){
     });
 });*/
 
+var bodyParser = require('body-parser')
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
 
 app.use(express.static('www'));
 
@@ -64,8 +69,8 @@ app.get('/tab/home/:foodId/detail', foodResource.findById);
 app.get('/tab/home/:foodName', foodResource.findByName);
 
 
+app.post('/detail/comment', reviewResource.insertComment);
 app.get('/tab/review', reviewResource.findAll);
-app.get('/tab/review/:reviewId', reviewResource.findById);
 app.get('/tab/review/:search', reviewResource.findByContents);
 
 app.get('/tab/my/:userId', userResource.findById);

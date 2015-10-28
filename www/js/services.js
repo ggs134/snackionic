@@ -11,11 +11,8 @@ angular.module('directory.services', ['ngResource'])
 .factory('Reviews', function($resource) {
   return $resource('/tab/review');
 })
-.factory('Reviews', function($resource) {
-  return $resource('/tab/review/:reviewId');
-})
-.factory('Review', function($resource) {
-  return $resource('/tab/review/:search');
+.factory('Comment', function($resource) {
+  return $resource('/detail/comment');
 })
 .factory('Users', function($resource) {
   return $resource('/tab/my/:userId');

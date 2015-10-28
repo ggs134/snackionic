@@ -1,35 +1,36 @@
 <div class="modal">
-        <header class="bar bar-header bar-positive">
-          <h2 class="title"><a>12<a> People Likes it!</h1>
-          <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
-        </header>
-        <content has-header="true" padding="true">
-          <br><br>
-	
+  <header class="bar bar-header bar-positive">
+    <h2 class="title"><a>12<a> People Likes it!</h1>
+      <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+    </header>
+    <content has-header="true" padding="true">
+      <br><br>
 
-	<!-- Comments -->
-	<ion-list>
-                   <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap">
-                    <img ng-src="https://s-media-cache-ak0.pinimg.com/236x/5b/f4/3a/5bf43a928f5743c90b997985c8f0bc87.jpg">
-                            <h2>David Backham</h2>
-                            <p>Wow great!</p>
-                  </ion-item>
-            </ion-list>
 
-            <!-- Footer -->
+      <!-- Comments -->
+      <ion-list >
+        <ion-item ng-repeat="comment in comments | filter:{ snack_id: food.ref_id }" class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap">
+          <img ng-src="https://s-media-cache-ak0.pinimg.com/236x/5b/f4/3a/5bf43a928f5743c90b997985c8f0bc87.jpg">
+          <!--
+          {{comment.snack_id}}
+          <p>{{food.ref_id}}</p>
+          -->
+          <h2>{{comment.by.nickname}}</h2>
+          <p>{{comment.text}}</p>
+        </ion-item>
+      </ion-list>
 
-            <div class="bar bar-footer bar-light">
-		  <label class="item item-input">
-		  <span class="input-label"> Comments ></span>
-		  <input type="text">
-		</label>
-		&nbsp&nbsp
-		<p>
-		<button class="button button-light">
-		  Done
-		</button>
-		</p>
-	</div>
+      <!-- Footer -->
 
-        </content>
- </div>
+      <div class="bar bar-footer item-input-inset">
+        <label class="item-input-wrapper">
+          <i class="icon ion-ios7-text placeholder-icon"></i>
+          <input placeholder="리뷰를 작성해 주세요"  type="text" ng-model="comments">
+        </label>
+          <button class="button button-light" ng-click="insertComment(comments)">
+            Done
+          </button>
+      </div>
+
+    </content>
+  </div>
